@@ -4,7 +4,7 @@ Horizonal scroll while Shift key is pressed and scroll by page when Alt key is p
 Minimum requirements:
   * Windows 2000
   * Office 2000
-Supports both 32-bit and 64-bit Office.
+<br/>Supports both 32-bit and 64-bit Office.
 
 ## Install/remove
 Double click INSTALL.bat to copy files to their folders.<br/>
