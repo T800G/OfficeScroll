@@ -1,4 +1,4 @@
-# MsoScroll
+# Office Scroll Add-In
 Enhanced mouse wheel scroll add-in for Microsoft Excel and Word.
 
 Horizonal scroll while Shift key is pressed and scroll by page when Alt key is pressed.
