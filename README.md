@@ -15,7 +15,6 @@ This add-in is not compatible with Excel Horizontal Scroll COM add-in, you need 
 
 ## Install/Remove
 You can install this add-in as a standard user (non-administrator).<br/>
-Unzip all files.<br/>
-Double click INSTALL.bat to copy files to their folders.<br/>
-Double click REMOVE.bat to delete all files.<br/>
-Restart Word and Excel.
+1. Unzip all files.<br/>
+2. Double click INSTALL.bat to copy files to their folders (double click REMOVE.bat to delete all files).<br/>
+3. Restart Word and Excel.
