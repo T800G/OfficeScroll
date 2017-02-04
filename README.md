@@ -1,7 +1,9 @@
 # Office Scroll Add-In
 Enhanced mouse wheel scroll add-in for Microsoft Excel and Word.<br/>
-Horizonal scroll while Shift key is pressed and scroll by page when Alt key is pressed.<br/>
-Minimum requirements:
+Horizonal scroll while Shift key is pressed and scroll by page when Alt key is pressed.
+![alt text](https://github.com/T800G/OfficeScroll/blob/master/xlhscroll.gif "Excel horizontal scroll")
+![alt text](https://github.com/T800G/OfficeScroll/blob/master/wdvscroll.gif "Word vertical scroll")<br/>
+##Minimum requirements:
   * Windows 2000
   * Office 2000
 
