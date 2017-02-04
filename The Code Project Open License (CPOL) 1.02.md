@@ -11,7 +11,7 @@ H4 { font-size: 10pt; color: black; }
 PRE { BACKGROUND-COLOR: #FBEDBB; FONT-FAMILY: "Courier New", Courier, mono; WHITE-SPACE: pre; }
 CODE { COLOR: #990000; FONT-FAMILY: "Courier New", Courier, mono; }
 .SpacedList li { padding: 5px 0px 5px 0px;}
-</style>
+</Style>
 </head>
 <body bgcolor="#FFFFFF" color=#000000>
 
