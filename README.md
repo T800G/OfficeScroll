@@ -12,6 +12,7 @@ Supports both 32-bit and 64-bit Office.
 This add-in is not compatible with Excel Horizontal Scroll COM add-in, you need to uninstall it first.
 
 ## Install/remove
+Unzip all files.<br/>
 Double click INSTALL.bat to copy files to their folders.<br/>
 Double click REMOVE.bat to delete all files.<br/>
 Restart Word and Excel.
