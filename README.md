@@ -10,4 +10,5 @@ Supports both 32-bit and 64-bit Office.
 
 ## Install/remove
 Double click INSTALL.bat to copy files to their folders.<br/>
-Double click REMOVE.bat to delete all files.
+Double click REMOVE.bat to delete all files.<br/>
+Restart Word and Excel.
