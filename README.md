@@ -11,6 +11,8 @@ Horizonal scroll while Shift key is pressed and scroll by page when Alt key is p
 Supports both 32-bit and 64-bit Office.
 
 ### IMPORTANT
+This add-in is not compatible with KatMouse and similar software. Excel.exe must be added to application ignore list in KatMouse options.<br>
+<br>
 This add-in is not compatible with Excel Horizontal Scroll COM add-in, you need to uninstall it first.
 
 ## Install/Remove
