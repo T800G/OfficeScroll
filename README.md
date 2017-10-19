@@ -13,6 +13,7 @@ Supports both 32-bit and 64-bit Office.
 ### IMPORTANT
 This add-in is not compatible with KatMouse and similar software. Excel.exe must be added to application ignore list in KatMouse options.<br>
 This add-in is not compatible with Excel Horizontal Scroll COM add-in, you need to uninstall it first.
+If Windows AppLocker is active on your system, depending on the configuration, you may not be able to use this addon.
 
 ## Install/Remove
 You can install this add-in as a standard user (non-administrator).<br/>
