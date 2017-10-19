@@ -4,7 +4,7 @@ Horizonal scroll while Shift key is pressed and scroll by page when Alt key is p
 ![alt text](https://github.com/T800G/OfficeScroll/blob/master/xlhscroll.gif "Excel horizontal scroll")
 ![alt text](https://github.com/T800G/OfficeScroll/blob/master/wdvscroll.gif "Word vertical scroll")<br/>
 
-##Minimum requirements:
+## Minimum requirements:
   * Windows 2000
   * Office 2000
 
