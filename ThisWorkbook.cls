@@ -23,7 +23,7 @@ Public Sub Workbook_Open()
     Dim dllPath As String
     dllPath = Environ("APPDATA") & "\Microsoft\AddIns\" & DLLNAME
     If Dir(dllPath) <> "" Then
-        If Not CheckXLAddins() Then Exit Sub
+        'If Not CheckXLAddins() Then Exit Sub
 		'Debug.Assert (m_hDll = 0)
 		If (m_hDll = 0) Then m_hDll = LoadLibrary(dllPath)
 		'Debug.Assert (m_hDll <> 0)
@@ -46,20 +46,20 @@ Public Sub Workbook_BeforeClose(Cancel As Boolean)
     End If
 End Sub
 
-Private Function CheckXLAddins() As Boolean
-On Error GoTo ErrHandler
-	CheckXLAddins = True
-    Dim ca As COMAddIn
-    For Each ca In Application.COMAddIns
-        'Debug.Print "Application.COMAddIns: " & ca.GUID & " " & ca.progID
-        If ca.progID = "XLHScroll.Connect" Then
-            MsgBox "Uninstall Excel Horizontal Scroll Add-in before using Office Scroll Add-in", vbOKOnly Or vbExclamation, "Office Scroll Add-in"
-            CheckXLAddins = False
-			Exit Function
-        End If
-    Next ca
-    On Error GoTo 0
-    Exit Function
-ErrHandler:
-    Debug.Print "MsoScroll::CheckXLAddins Line " & Erl & " error " & Err.Number & ": " & Err.Description
-End Function
+'Private Function CheckXLAddins() As Boolean
+'On Error GoTo ErrHandler
+'	CheckXLAddins = True
+'    Dim ca As COMAddIn
+'    For Each ca In Application.COMAddIns
+'        'Debug.Print "Application.COMAddIns: " & ca.GUID & " " & ca.progID
+'        If ca.progID = "XLHScroll.Connect" Then
+'            MsgBox "Uninstall Excel Horizontal Scroll Add-in before using Office Scroll Add-in", vbOKOnly Or vbExclamation, "Office Scroll Add-in"
+'            CheckXLAddins = False
+'			Exit Function
+'        End If
+'    Next ca
+'    On Error GoTo 0
+'    Exit Function
+'ErrHandler:
+'    Debug.Print "MsoScroll::CheckXLAddins Line " & Erl & " error " & Err.Number & ": " & Err.Description
+'End Function
