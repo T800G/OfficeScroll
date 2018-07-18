@@ -24,12 +24,12 @@ Public Sub Workbook_Open()
     dllPath = Environ("APPDATA") & "\Microsoft\AddIns\" & DLLNAME
     If Dir(dllPath) <> "" Then
         If Not CheckXLAddins() Then Exit Sub
-		Debug.Assert (m_hDll = 0)
+		'Debug.Assert (m_hDll = 0)
 		If (m_hDll = 0) Then m_hDll = LoadLibrary(dllPath)
-		Debug.Assert (m_hDll <> 0)
+		'Debug.Assert (m_hDll <> 0)
 		If m_hDll <> 0 Then
 			hResult = Connect(Application)
-			Debug.Assert (hResult = S_OK)
+			'Debug.Assert (hResult = S_OK)
 			Debug.Print DLLNAME & "::Connect()"
 		End If
     Else
@@ -40,7 +40,7 @@ End Sub
 Public Sub Workbook_BeforeClose(Cancel As Boolean)
     If (m_hDll <> 0) Then
         hResult = Disconnect()
-        Debug.Assert (hResult = S_OK)
+        'Debug.Assert (hResult = S_OK)
         FreeLibrary m_hDll
         m_hDll = 0
     End If
