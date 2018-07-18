@@ -13,8 +13,8 @@
 //
 LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
 VS_VERSION_INFO VERSIONINFO
-    FILEVERSION     1,0,0,0
-    PRODUCTVERSION  1,0,0,0
+    FILEVERSION     1,2,0,0
+    PRODUCTVERSION  1,2,0,0
     FILEOS          VOS__WINDOWS32
     FILETYPE        VFT_DLL
     FILESUBTYPE     VFT2_UNKNOWN
@@ -31,9 +31,9 @@ VS_VERSION_INFO VERSIONINFO
 #else
             VALUE "FileDescription", "Office Scroll Add-In 32-bit\0"
 #endif
-            VALUE "FileVersion", "1.0\0"
-            VALUE "ProductVersion", "1.0\0"
-            VALUE "LegalCopyright", "T800 Productions \251 2017\0"
+            VALUE "FileVersion", "1.2\0"
+            VALUE "ProductVersion", "1.2\0"
+            VALUE "LegalCopyright", "T800 Productions \251 2018\0"
             VALUE "ProductName", "Office Scroll Add-In\0"
         }
     }

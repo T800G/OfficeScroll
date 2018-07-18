@@ -110,18 +110,32 @@ LRESULT CALLBACK MouseHookProc(int nCode, WPARAM wMsg, LPARAM lParam)
 			//Word can also use "PageScroll" method
 			LPOLESTR pstrMethodName= HIWORD(GetKeyState(VK_MENU)) ? L"LargeScroll" : L"SmallScroll";//scroll by line/cell or by page
 
+			//send Alt key up,down,up to fix ribbon tooltips
+			INPUT ip[3] ;
+			ZeroMemory(ip, sizeof(ip));
+			ip[0].type = INPUT_KEYBOARD;
+			ip[0].ki.wScan = MapVirtualKey(VK_MENU, MAPVK_VK_TO_VSC);
+			ip[0].ki.dwFlags = KEYEVENTF_EXTENDEDKEY | KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;
+			ip[1].type = INPUT_KEYBOARD;
+			ip[1].ki.wScan = MapVirtualKey(VK_MENU, MAPVK_VK_TO_VSC);
+			ip[1].ki.dwFlags = KEYEVENTF_EXTENDEDKEY | KEYEVENTF_SCANCODE;
+			ip[2].type = INPUT_KEYBOARD;
+			ip[2].ki.wScan = MapVirtualKey(VK_MENU, MAPVK_VK_TO_VSC);
+			ip[2].ki.dwFlags = KEYEVENTF_EXTENDEDKEY | KEYEVENTF_SCANCODE | KEYEVENTF_KEYUP;
+			SendInput(3, ip, sizeof(INPUT));
+
 			VARIANT vt_, vt1;
 			vt_.vt = VT_I4;//VB Long type
 			vt1.vt = VT_I4;
 			vt_.lVal = 0;
 			vt1.lVal = 1;
-			
-			if HIWORD(GetKeyState(VK_SHIFT)) //horizontal
+			//SendInput might interfere, so use GetAsyncKeyState instead of GetKeyState
+			if HIWORD(GetAsyncKeyState(VK_SHIFT)) //scroll horizontaly
 			{
 				if (zDelta < 0) AutoWrap(DISPATCH_METHOD, NULL, vtActiveWindow.pdispVal, pstrMethodName, 4, vt_, vt1, vt_, vt_); //Left, Right, Up, Down (reverse order!)
 				else            AutoWrap(DISPATCH_METHOD, NULL, vtActiveWindow.pdispVal, pstrMethodName, 4, vt1, vt_, vt_, vt_);
 			}
-			else //vertical
+			else //scroll verticaly
 			{
 				//if (g_AppID) //Word
 				//{
