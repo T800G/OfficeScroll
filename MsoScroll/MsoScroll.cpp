@@ -26,10 +26,6 @@ BOOL g_bRecurse;
 //
 HRESULT AutoWrap(int autoType, VARIANT *pvResult, IDispatch *pDisp, LPOLESTR ptName, int cArgs...)
 {
-	// Begin variable-argument list
-	va_list marker;
-	va_start(marker, cArgs);
-
 	if (!pDisp) return E_INVALIDARG;
 
 	// Variables used
@@ -49,7 +45,11 @@ HRESULT AutoWrap(int autoType, VARIANT *pvResult, IDispatch *pDisp, LPOLESTR ptN
 //#endif//_DEBUG
 		return hr;
 	}
-
+	
+	// Begin variable-argument list
+	va_list marker;
+	va_start(marker, cArgs);
+	
 	// Allocate memory for arguments
 	VARIANT *pArgs = new VARIANT[cArgs + 1];
 	// Extract arguments...
@@ -78,7 +78,6 @@ HRESULT AutoWrap(int autoType, VARIANT *pvResult, IDispatch *pDisp, LPOLESTR ptN
 		_com_error err(hr);
 		OutputDebugString(err.ErrorMessage()); OutputDebugString(_T("\n"));
 //#endif//_DEBUG
-		return hr;
 	}
 
 	// End variable-argument section
@@ -153,7 +152,7 @@ LRESULT CALLBACK MouseHookProc(int nCode, WPARAM wMsg, LPARAM lParam)
 
 		g_bRecurse=FALSE;
 
-		/*We must not pass this message to hook chain if there's no opened workbook, WM_MOUSEWHEEL+Shift crashes Excel.
+		/*We must not pass this message to hook chain if there's no opened workbook, otherwise WM_MOUSEWHEEL + Shift crashes Excel.
 		Excel (and Word) installs it's own application-level hooks (WH_MSGFILTER, WH_KEYBOARD, WH_CBT).
 		This bug is present in Excel 97, 2000, 2002 and 2003. */
 		return 1;

@@ -33,7 +33,7 @@ VS_VERSION_INFO VERSIONINFO
 #endif
             VALUE "FileVersion", "1.2\0"
             VALUE "ProductVersion", "1.2\0"
-            VALUE "LegalCopyright", "T800 Productions \251 2018\0"
+            VALUE "LegalCopyright", "T800 Productions \251 2019\0"
             VALUE "ProductName", "Office Scroll Add-In\0"
         }
     }
