@@ -33,7 +33,7 @@ Public Sub Workbook_Open()
 			Debug.Print DLLNAME & "::Connect()"
 		End If
     Else
-        MsgBox DLLNAME & " file not found", vbCritical, "Office Scroll Add-in"
+        MsgBox "File not found:" & vbCrLf & dllPath, vbCritical, "Office Scroll Add-in"
     End If
 End Sub
 
