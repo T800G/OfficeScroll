@@ -16,6 +16,10 @@ This add-in is not compatible with KatMouse and similar software. Excel.exe must
 This add-in is not compatible with Excel Horizontal Scroll COM add-in, you need to uninstall it first.<br>
 If Windows AppLocker is active on your system, depending on the configuration, you may not be able to use this add-in.
 
+### Multiple system input languages
+This addin sends additional Alt key strokes to hide ribbon tooltips.
+If you use multiple system input languages, set the input language switch key to "Not assigned" (Control panel -> Regional settings) and enable language bar in taskbar to switch languages through right-click on it.
+
 ### KNOWN PROBLEMS
 The Office version installed from Microsoft Store has problems loading external dll files.
 For solution, refer to https://stackoverflow.com/questions/50683727/loadlibrary-in-vba-returns-0-when-trying-to-load-r-dll-in-office-from-microsoft
