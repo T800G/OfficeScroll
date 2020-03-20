@@ -23,7 +23,7 @@ If you use multiple system input languages, set the input language switch key to
 ## KNOWN PROBLEMS
   * The Office version installed from Microsoft Store has problems loading external dll files.
 For solution, refer to https://stackoverflow.com/questions/50683727/loadlibrary-in-vba-returns-0-when-trying-to-load-r-dll-in-office-from-microsoft
-  * Kayspersky antivirus software causes PowerPoint to crash when loading ppa/ppm add-ins. For that reason PowerPoint add-in is provided in a separate zip package.
+  * Kaspersky antivirus software causes PowerPoint to crash when loading ppa/ppm add-ins. For that reason PowerPoint add-in is provided in a separate zip package.
 
 ## Install/Remove
 You can install this add-in as a standard user (non-administrator).<br/>
